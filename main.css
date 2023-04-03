@@ -592,7 +592,7 @@ footer .social .bi {
 
 /* 1400 */
 @media screen and (max-width: 1400px) {
-    
+
     nav {
         padding: 0 15%;
     }
@@ -600,6 +600,14 @@ footer .social .bi {
     nav > ul > li > a {
         font-size: 2rem;
         font-weight: 500;
+    }
+
+    .hero-section {
+        top: 0;
+    }
+
+    .hero-content {
+        height: calc(90vh - 2 * 128px);
     }
 
     
@@ -638,14 +646,6 @@ footer .social .bi {
 
 /* 1024 */
 @media screen and (max-width: 1024px) {
-
-    .hero-section {
-        top: 0;
-    }
-
-    .hero-content {
-        height: calc(90vh - 2 * 128px);
-    }
 
     .hero-content h1 {
         font-size: 4.5rem;
