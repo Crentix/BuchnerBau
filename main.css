@@ -272,6 +272,7 @@ main {
     padding: 0 15%;
     margin-bottom: 18rem;
     position: relative;
+    width: 100%;
 }
 
 #references::before {
