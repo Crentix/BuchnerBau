@@ -383,12 +383,17 @@ main {
 #services ul li h3 {
     font-size: 3rem;
     font-weight: 700;
-    margin: 1.5rem 0 0.5rem 0;
+    margin: 0 0 0.5rem 0;
 }
 
-#services ul li img {
+/* replaced with fa-icons */
+#services ul li img, #services ul li svg {
     width: 48px;
     height: 48px;
+}
+
+#services ul li i {
+    font-size: 3em;
 }
 
 #services ul li p {
@@ -423,14 +428,14 @@ main {
 
 #team ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     position: relative;
 }
 
 #team ul li {
     margin: 0 4rem;
-    width: calc((100vw - 30%)/4);
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
