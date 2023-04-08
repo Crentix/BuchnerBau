@@ -458,6 +458,7 @@ main {
 #team ul li p{
     color: #444444;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 /* Contact/Location */
@@ -683,7 +684,7 @@ footer .social .bi {
     }
 
     #team::before {
-        height: 720px;
+        height: 520px;
     }
 
     #team h2 {
@@ -874,7 +875,7 @@ footer .social .bi {
     }
 
     #team::before {
-        height: 740px;
+        height: 510px;
     }
 
     #team ul li {
@@ -960,6 +961,14 @@ footer .social .bi {
         height: unset;
     }
 
+    #team::before {
+        height: 800px;
+    }
+
+    #team ul li {
+        width: 50%;
+    }
+
     footer .upper-footer {
         flex-wrap: wrap;
     }
@@ -982,7 +991,7 @@ footer .social .bi {
     }
 
     #team::before {
-        height: 1300px;
+        height: 770px;
     }
 
     #team ul li {
@@ -1020,7 +1029,7 @@ footer .social .bi {
     }
 
     #team::before {
-        height: 1370px;
+        height: 770px;
     }
 
     #team ul li {
