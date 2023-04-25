@@ -46,8 +46,8 @@
                 <p>Erleben Sie qualitativ hochwertige Bauprojekte mit Buchner-Bau in Salching und Umgebung. Kontaktieren
                     Sie uns jetzt und lassen Sie uns Ihre Visionen umsetzen.</p>
                 <div class="hero-buttons">
-                    <a href="kontakt.html" class="cta-button">Jetzt anfragen</a>
-                    <a href="angebot.html" class="cta-button">Kostenloses Angebot anfordern</a>
+                    <a href="#contact-location" class="cta-button">Jetzt anfragen</a>
+                    <a href="#contact-location" class="cta-button">Ausbildungsplatz sichern</a>
                 </div>
             </div>
         </section>
@@ -55,13 +55,14 @@
     <main>
         <section id="about-us">
             <h2>Über uns</h2>
-            <p>Wir sind ein traditionsreiches Bauunternehmen aus Oberpiebing und haben uns auf [Leistungen]
-                spezialisiert. Seit [Gründungsjahr] realisieren wir Bauprojekte in höchster Qualität und mit großer
+            <p>Wir sind ein traditionsreiches Bauunternehmen aus Oberpiebing und haben uns auf Wohnungs-, Gewerbe- und
+                Hallenbau
+                spezialisiert. Seit 1977 realisieren wir Bauprojekte in höchster Qualität und mit großer
                 Leidenschaft für unseren Beruf.</p>
             <p>Unser Team besteht aus erfahrenen und qualifizierten Handwerkern und Planern, die jeden Auftrag mit
                 großem Engagement und Sorgfalt ausführen. Wir legen Wert auf eine enge Zusammenarbeit mit unseren Kunden
                 und beraten Sie gerne bei allen Fragen rund um Ihr Bauvorhaben.</p>
-            <div id="reviews">
+            <!--div id="reviews">
                 <div class="review">
                     <div class="review-head">
                         <img src="assets/customers/fake-customer1.jpg" alt="Profilbild von Kunde 1">
@@ -90,7 +91,7 @@
                         sicherzustellen, dass das Projekt pünktlich fertiggestellt wurde. Das Ergebnis war
                         fantastisch."</p>
                 </div>
-            </div>
+            </div-->
         </section>
 
         <section id="references">
@@ -172,7 +173,10 @@
                 <h2>Kontakt</h2>
                 <p>Haben Sie Fragen zu unseren Leistungen oder möchten Sie ein Angebot für Ihr Bauvorhaben einholen?
                     Dann
-                    nehmen Sie Kontakt mit uns auf! <br />Wir freuen uns auf Ihre Anfrage.</p>
+                    nehmen Sie Kontakt mit uns auf! <br />Wir freuen uns auf Ihre Anfrage. <br /><br /> Interessieren
+                    Sie sich für eine Ausbildung in unserem Unternehmen? Dann nutzen Sie ebenfalls das untenstehende
+                    Formular. Wir sind stets auf der Suche nach motivierten
+                    Auszubildenden und freuen uns auf Ihre Nachricht.</p>
                 <form>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="Max Mustermann" required>
@@ -182,7 +186,7 @@
 
                     <label for="message">Nachricht:</label>
                     <textarea id="message" name="message"
-                        placeholder="Anfrage für Angebot im Bereich Neubau und Sanierung" rows="8" required></textarea>
+                        placeholder="Anfrage für Angebot im Bereich Hallenbau&#10;oder&#10;Interesse an einer Ausbildung zum Maurer" rows="8" required></textarea>
 
                     <button type="submit">Nachricht senden</button>
                 </form>
@@ -265,6 +269,7 @@
         document.getElementById("hero-vid").src = "";
     })
 
+    /*
     var reviews = document.getElementsByClassName("review")
     var minHeightOfReviews = 0;
 
@@ -290,8 +295,7 @@
 
     setActiveReview()
     setInterval(setActiveReview, 1000 * 10);
-
-
+    */
 
 </script>
 

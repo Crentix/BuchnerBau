@@ -304,6 +304,7 @@ main {
 }
 
 
+/*
 #references ul li .reference-overlay{
     display: flex;
     align-items: center;
@@ -325,10 +326,10 @@ main {
     border: 1px solid white;
     cursor: pointer;
 }
-
 #references ul li:hover .reference-overlay{
     opacity: 1;
 }
+*/
 
 #references ul li .reference-overlay a:hover{
     background-color: rgba(255, 204, 51, .8);
@@ -475,9 +476,13 @@ main {
 
 .contact {
     margin-right: 4rem;
+    max-width: 50%;
+    min-width: 50%;
 }
 .location {
     margin-left: 4rem;
+    max-width: 50%;
+    min-width: 50%;
 }
 
 .contact form {
@@ -497,6 +502,13 @@ main {
     border-radius: 5px;
     border: 1px solid #222222;
     margin-bottom: 1.5rem;
+}
+
+.contact form textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100px;
+    max-height: 260px;
 }
 
 .contact form button {
