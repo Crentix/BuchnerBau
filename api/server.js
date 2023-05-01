@@ -8,6 +8,7 @@ app.use(cors())
 app.use(express.json())
 
 app.post("/contact", async (req, res) => {
+    console.log("incoming post request")
     const { name, email, message } = req.body;
 
     // create reusable transporter object using the default SMTP transport
