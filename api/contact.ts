@@ -1,4 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
+import { Transporter } from 'nodemailer';
 const nodemailer = require('nodemailer');
 
 export default async function handler(
@@ -11,7 +12,7 @@ export default async function handler(
     const { name, email, message } = req.body;
     
     // create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
+    let transporter: Transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
       port: process.env.EMAIL_PORT,
       secure: true,
@@ -22,14 +23,17 @@ export default async function handler(
     });
     
     // send mail with defined transport object
-    let info = await transporter.sendMail({
+    transporter.sendMail({
       from: email, // sender address
       to: process.env.EMAIL_RECIPIENT, //'buchner-bau@r-kom.net', // list of receivers
       subject: `Nachricht von ${name} über die Website`, // Subject line
       text: message, // plain text body
-    });
+    }).then(info => {
+      res.status(200).json({ message: 'E-Mail erfolgreich versendet' });
+    }).catch(err => {
+      res.status(500).json({ error: err });
+    })
     
-    res.status(200).json({ message: 'E-Mail erfolgreich versendet' });
   } else {
     res.status(405).json({ error: "Method not allowed" });
   }
