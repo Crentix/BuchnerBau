@@ -1,8 +1,8 @@
+const serverless = require("serverless-http");
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const app = express();
-const port = process.env.PORT || 3000;
 
 app.use(cors())
 app.use(express.json())
@@ -33,6 +33,5 @@ app.post("/contact", async (req, res) => {
     res.status(200).json({ message: 'E-Mail erfolgreich versendet' });
 })
 
-app.listen(port, () => {
-    console.log(`Server listening on port ${port}.`);
-});
+// wrap express app with serverless http to work with Vercel
+module.exports = serverless(app);

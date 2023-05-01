@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Crentix/BuchnerBau/issues"
   },
-  "homepage": "https://github.com/Crentix/BuchnerBau#readme"
+  "homepage": "https://github.com/Crentix/BuchnerBau#readme",
+  "dependencies": {
+    "serverless-http": "^3.2.0"
+  }
 }
