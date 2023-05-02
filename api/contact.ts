@@ -26,10 +26,10 @@ export default async function handler(
     
     // send mail with defined transport object
     transporter.sendMail({
-      from: email, // sender address
+      from: process.env.EMAIL_USER, // sender address
       to: process.env.EMAIL_RECIPIENT, //'buchner-bau@r-kom.net', // list of receivers
       subject: `Nachricht von ${name} über die Website`, // Subject line
-      text: message, // plain text body
+      text: `${message} von: ${email}`, // plain text body
     }).then(info => {
       res.status(200).json({ message: 'E-Mail erfolgreich versendet' });
     }).catch(err => {
