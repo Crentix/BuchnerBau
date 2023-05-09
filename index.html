@@ -304,6 +304,7 @@
         try {
             const response = await fetch('/api/contact', {
                 method: 'POST',
+                "content-type": "application/json",
                 body: JSON.stringify(data)
             });
 
