@@ -178,7 +178,7 @@
                     Sie sich für eine Ausbildung in unserem Unternehmen? Dann nutzen Sie ebenfalls das untenstehende
                     Formular. Wir sind stets auf der Suche nach motivierten
                     Auszubildenden und freuen uns auf Ihre Nachricht.</p>
-                <form>
+                <form method="POST" action="/api/contact">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="Max Mustermann" required>
 
@@ -187,7 +187,8 @@
 
                     <label for="message">Nachricht:</label>
                     <textarea id="message" name="message"
-                        placeholder="Anfrage für Angebot im Bereich Hallenbau&#10;oder&#10;Interesse an einer Ausbildung zum Maurer" rows="8" required></textarea>
+                        placeholder="Anfrage für Angebot im Bereich Hallenbau&#10;oder&#10;Interesse an einer Ausbildung zum Maurer"
+                        rows="8" required></textarea>
 
                     <button type="submit">Nachricht senden</button>
                 </form>
@@ -198,11 +199,11 @@
                 <p>Besuchen Sie uns gerne in unserem Büro <br /><span class="address">Ausserhienthaler Str. 25
                         <br />94330 Salching </span><br />Wir sind Montag bis Freitag von
                     8:00 bis 17:00 Uhr für Sie da.</p>
-                <!--iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.883954212071!2d[Longitude]&amp;3b2.966816115717!3d[Latitude]!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNjfCsDQ2JzQ5LjgiTiAzMDDCsDE4JzQ4LjkiRQ!5e0!3m2!1sde!2sde!4v1585511662576!5m2!1sde!2sde"
-                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                    tabindex="0"></iframe-->
-                <img src="assets/map.png" alt="Anfahrt">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.0913621422865!2d12.58100107680212!3d48.799234904867234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47757a806a6603f7%3A0xc4efde0760d25f5!2sBuchner%20Bau%20GmbH!5e0!3m2!1sde!2sde!4v1683615720997!5m2!1sde!2sde"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!--img src="assets/map.png" alt="Anfahrt"-->
             </div>
         </section>
     </main>
