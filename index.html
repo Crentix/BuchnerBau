@@ -295,12 +295,16 @@
 
         // Get the form data
         const formData = new FormData(form);
+        const data = {};
+        for (const [key, value] of formData.entries()) {
+            data[key] = value;
+        }
 
         // Send a POST request to the server with the form data
         try {
             const response = await fetch('/api/contact', {
                 method: 'POST',
-                body: JSON.stringify(Object.fromEntries(formData.entries))
+                body: JSON.stringify(data)
             });
 
             const json = await response.json();
