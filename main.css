@@ -522,6 +522,30 @@ main {
     margin-top: 1.5rem;
 }
 
+.contact #info-success, .contact #info-error {
+    display: none;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.contact #info-success {
+    background-color: rgba(52, 211, 157, .1);
+}
+
+.contact #info-error {
+    background-color: rgba(240, 77, 98, .1);
+}
+
+.contact #info-success svg, .contact #info-error svg{
+    margin-right: 2rem;
+}
+
+.contact #info-success p, .contact #info-error p{
+    margin: 0;
+}
+
 /* Footer */
 footer {
     display: flex;

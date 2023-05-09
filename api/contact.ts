@@ -5,9 +5,9 @@ const nodemailer = require('nodemailer');
 // Define a Map to keep track of the requests made by each IP address
 const requestsMap: Map<string, number[]> = new Map();
 // Define a constant to limit the number of requests per IP address
-const REQUEST_LIMIT = 1;
+const REQUEST_LIMIT = parseInt(process.env.REQUEST_LIMIT || "10", 10);
 // Define a constant to specify the time period for the rate limiting
-const TIME_PERIOD = 60 * 60 * 1000; // 1 hour in milliseconds
+const TIME_PERIOD = parseInt(process.env.TIME_PERIOD || "0", 10); // in milliseconds
 
 // Function to check if the IP address has exceeded the request limit
 function isRateLimited(ip: string): boolean {
@@ -36,7 +36,7 @@ export default async function handler(
   if (req.method == "POST") {
     const clientIP = req.headers['x-forwarded-for'] as string;
     if (isRateLimited(clientIP)) {
-      return res.status(429).send('Too many requests. Please try again later.');
+      return res.status(429).json({ message: 'Zu viele Anfragen. Bitte versuchen Sie es später erneut.' });
     }
     const { name, email, message } = req.body;
     
@@ -63,7 +63,7 @@ export default async function handler(
     }).then(info => {
       res.status(200).json({ message: 'E-Mail erfolgreich versendet' });
     }).catch(err => {
-      res.status(500).json({ error: err });
+      res.status(500).json({ message: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später noch einmal.' });
     })
     
   } else {
