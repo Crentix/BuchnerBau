@@ -34,6 +34,7 @@ export default async function handler(
 ) {
 
   if (req.method == "POST") {
+    console.log("req:", req)
     const clientIP = req.headers['x-forwarded-for'] as string;
     if (isRateLimited(clientIP)) {
       return res.status(429).json({ message: 'Zu viele Anfragen. Bitte versuchen Sie es später erneut.' });
