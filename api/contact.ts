@@ -62,8 +62,10 @@ export default async function handler(
       text: `Neue Kontaktanfrage von ${name} (${email}):\n${message}`, // plain text body
       html: `<p>Neue Kontaktanfrage von ${name} (${email}):</p><br/><p>${message}</p>` // html text body
     }).then(info => {
+      console.log("info:", info)
       res.status(200).json({ message: 'E-Mail erfolgreich versendet' });
     }).catch(err => {
+      console.log("err:", err)
       res.status(500).json({ message: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später noch einmal.' });
     })
     
