@@ -300,7 +300,7 @@
         try {
             const response = await fetch('/api/contact', {
                 method: 'POST',
-                body: formData
+                body: JSON.stringify(Object.fromEntries(formData.entries))
             });
 
             const json = await response.json();
