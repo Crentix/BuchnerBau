@@ -190,7 +190,7 @@
                         placeholder="Anfrage für Angebot im Bereich Hallenbau&#10;oder&#10;Interesse an einer Ausbildung zum Maurer"
                         rows="8" required></textarea>
 
-                    <button type="submit">Nachricht senden</button>
+                    <button id="submitBtn" type="submit">Nachricht senden</button>
                 </form>
                 <div id="info-success">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#34d39d"
@@ -243,7 +243,7 @@
                 <p>Telefon: 09426 360</p>
                 <p>E-Mail: info@buchner-bau.de</p>
             </div>
-            <div class="social">
+            <!--div class="social">
                 <h4>Folgen Sie uns</h4>
                 <ul>
                     <li><a href="#">
@@ -268,7 +268,7 @@
                             </svg>
                         </a></li>
                 </ul>
-            </div>
+            </div-->
         </div>
         <div class="credits">
             <p>&copy; 2023 - Buchner Bau. Alle Rechte vorbehalten.</p>
@@ -288,10 +288,12 @@
     })
 
     const form = document.querySelector('form');
+    const btn = document.getElementById("submitBtn");
     const infoSucess = document.getElementById("info-success");
     const infoError = document.getElementById("info-error");
     form.addEventListener('submit', async (event) => {
         event.preventDefault(); // Prevent default form submit behavior
+        btn.setAttribute("disabled", "disabled");
 
         // Get the form data
         const formData = new FormData(form);
@@ -317,14 +319,26 @@
                 // Display a success message to the user
                 infoSucess.querySelector("p").textContent = json.message;
                 infoSucess.style.display = 'flex';
+                setTimeout(() => {
+                    infoSucess.style.display = 'none';
+                    btn.removeAttribute("disabled");
+                }, 1000 * 10)
             } else {
                 // Display an error message to the user
                 infoError.querySelector("p").textContent = json.message;
                 infoError.style.display = 'flex';
+                setTimeout(() => {
+                    infoError.style.display = 'none';
+                    btn.removeAttribute("disabled");
+                }, 1000 * 10)
             }
         } catch (error) {
             infoError.querySelector("p").textContent = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später noch einmal.';
             infoError.style.display = 'flex';
+            setTimeout(() => {
+                infoError.style.display = 'none';
+                btn.removeAttribute("disabled");
+            }, 1000 * 10)
         }
     });
 

@@ -546,6 +546,11 @@ main {
     margin: 0;
 }
 
+#submitBtn:disabled {
+    background-color: #6daedf;
+    cursor: not-allowed;
+}
+
 /* Footer */
 footer {
     display: flex;
