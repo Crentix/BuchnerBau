@@ -106,17 +106,21 @@
 
         <section id="aktuelles">
             <h2>Aktuelles</h2>
-            <ul>
-              <li>
-                <img src="assets/aktuelles/01.jpg">
-                <h3>6 Eigentumswohnungen</h3>
-                <p>Entdecken Sie unser neuestes Bauprojekt in Leiblfing: zwei moderne 6-Parteien-Häuser in zentraler Lage. Diese hochwertigen Eigentumswohnungen mit vier Fertigteilgaragen bieten eine exklusive Wohnmöglichkeit. Erfahren Sie mehr über dieses einzigartige Neubaukonzept und sichern Sie sich Ihr Traumzuhause in Leiblfing.</p>
-                <a onclick="console.log('hello');document.getElementById('aktuelles-pop-up').classList.toggle('active')">Mehr erfahren</a>
-            </li>
-            </ul>
-            <!--div id="aktuelles-pop-up">
-                <div class="content"></div>
-            </div-->
+            <div class="content">
+                <div class="image-gallery">
+                    <img onclick="event.target.classList.toggle('active')" src="assets/aktuelles/01.jpg">
+                    <img onclick="event.target.classList.toggle('active')" src="assets/aktuelles/02.jpg">
+                </div>
+                <h3>Neues Projekt: Zwei 6-Parteien-Häuser in zentraler Lage in Leiblfing</h3>
+                <p>Wir freuen uns, ein aufregendes neues Bauprojekt in Leiblfing anzukündigen. 
+                    In zentraler Lage werden demnächst zwei moderne 6-Parteien-Häuser errichtet, die zum Verkauf stehen. 
+                    Ein herausragendes Merkmal dieser neuen Immobilien ist die großzügige Wohnfläche von jeweils 80 Quadratmetern. 
+                    Ein weiterer bemerkenswerter Aspekt dieses Bauprojekts ist die KfW 40 NH Zertifizierung. 
+                    Für diese "Nachhaltigen Gebäude" bedeutet dies nicht nur ein verbessertes Raumklima, sondern auch geringere Energiekosten und eine positive ökologische Bilanz.</p>
+                <p>Wenn Sie Interesse an einer der Wohnungen haben oder weitere Informationen wünschen, zögern Sie nicht, mit uns Kontakt aufzunehmen. Unser Team steht Ihnen gerne zur Verfügung und beantwortet Ihre Fragen.
+                    Wir freuen uns darauf, Ihnen diese attraktiven Wohnungen präsentieren zu können und Sie bei Ihrem Weg zum Traumhaus zu begleiten.
+                    Herzlich willkommen in unserem neuen Bauprojekt in Leiblfing!</p>
+            </div>
         </section>
 
         <section id="references">
