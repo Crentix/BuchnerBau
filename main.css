@@ -188,6 +188,66 @@ nav > ul > li > a {
     height: 28px;
 }
 
+
+/* Impressum */
+#impressum{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4.5rem 30%;
+    margin-bottom: 14rem;
+    width: 100%;
+}
+
+#impressum h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#impressum > div {
+    width: 100%;
+}
+
+/* privacy-policy */
+#privacy-policy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4.5rem 30%;
+    margin-bottom: 14rem;
+    width: 100%;
+}
+
+#privacy-policy h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#privacy-policy h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#privacy-policy h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#privacy-policy > div {
+    width: 100%;
+}
+
+#privacy-policy > p > a {
+    text-decoration: underline;
+    color: #0092cb;
+}
+
 /* Main */
 main {
     display: flex;
@@ -195,13 +255,13 @@ main {
     flex-direction: column;
 }
 
-#about-us h2, #aktuelles h2, #references h2, #services h2, #team h2, #contact-location h2{
+#about-us h2, #aktuelles h2, #references h2, #services h2, #team h2, #contact-location h2, #impressum h2, #privacy-policy h2{
     font-weight: 700;
     font-size: 3rem;
     margin-bottom: 1.5rem;
 }
 
-#about-us h2::after, #aktuelles h2::after, #references h2::after, #services h2::after, #team h2::after{
+#about-us h2::after, #aktuelles h2::after, #references h2::after, #services h2::after, #team h2::after, #impressum h2::after, #privacy-policy h2::after{
     content: '';
     display: block;
     height: 1px;
@@ -693,6 +753,15 @@ footer .social .bi {
     width: 32px;
     height: 32px;
     color: white;
+}
+
+footer .credits {
+    display: flex;
+    gap: 0.5rem;
+}
+
+footer .credits a {
+    text-decoration: underline;
 }
 
 .back-to-top {
