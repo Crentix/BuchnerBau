@@ -1,0 +1,265 @@
+/* Blog-Section */
+#blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 15%;
+  margin-bottom: 24.5rem;
+  position: relative;
+}
+
+#blog h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #222222;
+}
+
+#blog h2::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 40px;
+  background-color: #222222;
+  margin: 2rem auto;
+}
+
+/* Spotlight-Bereich */
+.blog-spotlight {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.blog-spotlight-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+.blog-spotlight-content .excerpt {
+  font-size: 1.8rem;
+  color: #333333;
+  line-height: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+/* Timeline-Bereich */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+  padding: 3rem 3.5rem;
+}
+
+.timeline-info {
+  flex: 1;
+}
+
+.timeline-entry {
+  flex: 3;
+  background-color: #ffffff;
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  padding: 3rem 3.5rem;
+}
+
+.timeline-image {
+  width: 100%;
+  height: 280px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.timeline-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-title span.new-badge {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: #ffcc00;
+  border-radius: 12px;
+  padding: 0.2rem 0.6rem;
+  margin-left: 1rem;
+}
+
+.timeline-date {
+  font-size: 1.4rem;
+  color: #777777;
+  margin-bottom: 1rem;
+}
+
+.timeline-content {
+  font-size: 1.8rem;
+  color: #666666;
+  line-height: 2.4rem;
+  margin: 2rem 0;
+}
+
+.timeline-images-count {
+  font-size: 1.4rem;
+  color: #999999;
+  margin-top: 1rem;
+}
+
+/* Buttons */
+#blog .cta-button {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  color: #222222;
+  background-color: hwb(45 20% 0%);
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#blog .cta-button:hover {
+  background-color: hsl(47, 100%, 65%);
+}
+
+/* Projekt-Highlights */
+.project-highlights {
+  background-color: #f9f9f9; /* Dezenter Hintergrund */
+  padding: 2rem; /* Innenabstand */
+  margin: 2rem 0; /* Abstand nach oben und unten */
+}
+
+.project-highlights h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333333;
+}
+
+.project-highlights ul {
+  list-style-type: none; /* Keine Standard-Bulletpoints */
+  padding: 0;
+  margin: 0;
+}
+
+.project-highlights li {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #555555;
+  margin-bottom: 1rem; /* Abstand zwischen den Listenelementen */
+  display: flex; /* Für eventuelle Symbole links */
+  align-items: flex-start;
+}
+
+.project-highlights li strong {
+  color: #222222; /* Dunklere Farbe für die Hervorhebung */
+  margin-right: 0.5rem; /* Abstand zur Beschreibung */
+}
+
+/* Bildergalerie */
+.image-gallery {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.gallery-thumb {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery-thumb:hover {
+  transform: scale(1.1);
+}
+
+/* Modal */
+.gallery-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  text-align: center;
+  max-width: 80%;
+}
+
+.large-image {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  width: 3.6rem;
+  top: 10px;
+  right: 20px;
+  color: white;
+  background-color: #999999;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.navigation button {
+  background: #999999;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+  opacity: 0.8;
+}
+
+.navigation button:hover {
+  opacity: 1;
+}
+
+

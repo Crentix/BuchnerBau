@@ -357,58 +357,116 @@ main {
     position: relative;
 }
 
-#aktuelles .content h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin: .5rem 0;
+/* Spotlight */
+
+#aktuelles .spotlight {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: #ffffff;
+    border: none;
+    margin-bottom: 2rem;
+    padding: 2rem 3.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#aktuelles .content p {
-    font-size: 1.6rem;
-    line-height: 1.8rem;
-    letter-spacing: 0.1px;
-    margin: 1rem 0;
-    color: #5a5a5a;
+#aktuelles .spotlight h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #333333;
 }
 
-#aktuelles .content{
-    background-color: white;
-    position: relative;
-    /*overflow-y: scroll;*/
-    padding: 4.5rem 6.5rem;
+#aktuelles .spotlight-content .excerpt {
+    font-size: 1.7rem;
+    color: #333333;
+    line-height: 1.6rem;
+    margin: 2rem 0 1.5rem 0;
+}
+
+#aktuelles .spotlight-updates {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 2rem;
+    width: fit-content;
+}
+
+#aktuelles .spotlight-updates div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-#aktuelles .content h3, #aktuelles .content p {
-    width: 90%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
-#aktuelles .content .image-gallery {
-    display: flex;
+
+#aktuelles .spotlight-updates .spotlight-image {
+    width: 370px;
+    height: 190px;
+}
+
+#aktuelles .spotlight-updates img {
     width: 100%;
-    gap: 5%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#aktuelles .spotlight-updates h4 {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 2rem;
-    position: relative;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #333333;
 }
 
-#aktuelles .content .image-gallery img {
-    width: 45%;
-    box-sizing: border-box;
+#aktuelles .spotlight-updates h4 span {
+    color: black;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    font-weight: 400;
+    border-radius: 2rem;
+    padding: 0.25rem .75rem;
+    background-color: hsla(47, 100%, 65%, 0.7);
+}
+
+#aktuelles .spotlight-updates p {
+    font-size: 1.5rem;
+    color: #666666;
+}
+
+#aktuelles .spotlight .spotlight-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#aktuelles .spotlight .spotlight-footer span {
+    color: #666666;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    padding: 0.25rem .75rem;
+}
+
+#aktuelles .spotlight .more-btn, #aktuelles .all-projects-btn {
+    font-size: 1.5rem;
+    color: black;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    border: 2px solid hwb(45 20% 0%);
+    background-color: white;
     cursor: pointer;
+    transition: color 0.3s ease-in-out;
 }
 
-#aktuelles .content .image-gallery img:hover{
-    outline: 2px solid #ffcc33;
+#aktuelles .spotlight .more-btn {
+    background-color: hwb(45 20% 0%);
 }
 
-#aktuelles .content .image-gallery img.active {
-    transform: scale(2);
-    position: absolute;
-    top: 50%;
-    z-index: 1;
+#aktuelles .spotlight .more-btn:hover, #aktuelles .all-projects-btn:hover {
+    background-color: hsl(47, 100%, 65%);
+    border: 2px solid hsl(47, 100%, 65%);
 }
 
 /* References */
@@ -776,7 +834,6 @@ footer .credits a {
     width: 32px;
     height: 32px;
 }
-
 
 /* 1600 */
 @media screen and (max-width: 1600px) {
